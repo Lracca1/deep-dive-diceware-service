@@ -11,12 +11,12 @@ import org.springframework.security.oauth2.provider.token.ResourceServerTokenSer
 @Configuration
 public class DicewareConfiguration {
 
-  @Value("${oauth.clientId")
+  @Value("${oauth.clientId}")
   private String clientId;
 
   @Bean
   public Random getRandom() {
-    return new SecureRandom();
+    return new SecureRandom( );
   }
 
   @Bean
